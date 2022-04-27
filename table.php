@@ -1,6 +1,5 @@
 ﻿<!doctype html>
 <html lang="pl-PL">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,10 +9,9 @@
   <link rel="stylesheet" href="/css/style.css" type="text/css" />
   <title>Odczyt czujników</title>
 </head>
-
 <body>
   <div class="container">
-    <a href="index.html">Powrót</a>
+    <a href="heating.html">Powrót</a>
     <div class="table-responsive" >
     <?php
     // Łączymy się z bazą danych
@@ -69,5 +67,4 @@ mysqli_close($link);
     </div>
   </div>
 </body>
-
 </html>
