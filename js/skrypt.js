@@ -16,7 +16,7 @@ $(document).ready(function () {
     // Configuration options go here
     options: {}
   });
-  //js konies
+  //js koniec
 
   var obiekt;
   var godzina;
