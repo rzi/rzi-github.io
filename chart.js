@@ -1,8 +1,8 @@
 var roomSelect = document.getElementById("objektPomiarowy");
-var dateFrom = document.getElementById("datepickre1");
-var dateTo = document.getElementById("datepickre2");
-var timeFrom = document.getElementById("timepickre1");
-var timeTo = document.getElementById("timepickre2");
+var dateFrom = document.getElementById("datepicker1");
+var dateTo = document.getElementById("datepicker2");
+var timeFrom = document.getElementById("timepicker1");
+var timeTo = document.getElementById("timepicker2");
 fetch("https://tempapi.ct8.pl/getrooms")
   .then((res) => res.json())
   .then((res) => {
