@@ -47,7 +47,7 @@ roomSelect.addEventListener("change", function(){
 });
 
 function calcEpoch(date, time){
-var dateString =date+"T"+time 
+var dateString =date+"T"+time+":00"
 console.log(`dateString=${dateString}`)
 convertFromStringToDate(dateString)
 console.log(`convertFromStringToDate(dateString)= ${convertFromStringToDate(dateString)}`)
