@@ -9,17 +9,6 @@ function getData() {
   var sel = document.getElementById("objektPomiarowy");
   var obiekt = sel.options[sel.selectedIndex].value;
   console.log(`obiekt=${obiekt}`);
-  // fetch("gettemp", {
-  //   method: "post",
-  //   headers: {
-  //     "Content-type": "application/json",
-  //   },
-  //   body: JSON.stringify(obiekt),
-  // })
-  //   .then((res) => res.json())
-  //   .then((res) => {
-  //     console.log(res);
-  //   });
   (async () => {
     const rawResponse = await fetch("https://tempapi.ct8.pl/gettemp", {
       method: "POST",
@@ -41,3 +30,5 @@ function addToSelect(item) {
   myOption.value = item.my_nr_dec;
   roomSelect.add(myOption);
 }
+
+roomSelect.addEventListener("change", getData());
