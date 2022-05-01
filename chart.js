@@ -20,7 +20,7 @@ function getData() {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ obiekt: obiekt, epochFrom: "Textual content" , epochTo: " " }),
+      body: JSON.stringify({ obiekt: obiekt, epochFrom: " " , epochTo: " " }),
     });
     const content = await rawResponse.json();
 
@@ -40,14 +40,14 @@ roomSelect.addEventListener("change", function(){
   console.log(`dateFrom.value=${dateFrom.value}`)
   console.log(`timeFrom.value=${timeFrom.value}`)
   var dataFrom1 = calcEpoch(dateFrom.value, timeFrom.value);
-  console.log(`dataFrom ${dataFrom1}`)
+  console.log(`dataFrom1 ${dataFrom1}`)
 
   var dataTo1 =calcEpoch(dateTo.value, timeTo.value)
-  console.log(`dataTo ${dataTo1}`)
+  console.log(`dataTo1 ${dataTo1}`)
 });
 
 function calcEpoch(date, time){
-var dateString =date+"T"+time+":00"
+var dateString =date+"T"+time
 console.log(`dateString=${dateString}`)
 convertFromStringToDate(dateString)
 console.log(`convertFromStringToDate(dateString)= ${convertFromStringToDate(dateString)}`)
