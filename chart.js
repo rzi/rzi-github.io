@@ -37,10 +37,10 @@ function addToSelect(item) {
 
 roomSelect.addEventListener("change", function(){
   getData();
-  var dataFrom = calcEpoch(dataFrom.text, timeFrom.text);
+  var dataFrom = calcEpoch(dataFrom.value, timeFrom.value);
   console.log(`dataFrom ${dataFrom}`)
 
-  var dataTo =calcEpoch(dataTo.text, timeTo.text)
+  var dataTo =calcEpoch(dataTo.value, timeTo.value)
   console.log(`dataTo ${dataTo}`)
 });
 
