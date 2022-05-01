@@ -31,4 +31,4 @@ function addToSelect(item) {
   roomSelect.add(myOption);
 }
 
-roomSelect.addEventListener("change", getData());
+roomSelect.addEventListener("change", getData);
