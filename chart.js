@@ -7,7 +7,7 @@ fetch("https://tempapi.ct8.pl/getrooms")
   });
 function getData() {
   var sel = document.getElementById("objektPomiarowy");
-  var obiekt = sel.options[sel.selectedIndex].text;
+  var obiekt = sel.options[sel.selectedIndex].value;
   console.log(`obiekt=${obiekt}`);
   // fetch("gettemp", {
   //   method: "post",
