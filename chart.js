@@ -20,7 +20,7 @@ function getData() {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ obiekt: obiekt, epochFrom: " " , epochTo: " " }),
+      body: JSON.stringify({ obiekt: obiekt, epochFrom: " ", epochTo: " " }),
     });
     const content = await rawResponse.json();
 
@@ -35,28 +35,42 @@ function addToSelect(item) {
   roomSelect.add(myOption);
 }
 
-roomSelect.addEventListener("change", function(){
-  getData();
-  console.log(`dateFrom.value=${dateFrom.value}`)
-  console.log(`timeFrom.value=${timeFrom.value}`)
+roomSelect.addEventListener("change", function () {
+  
+  console.log(`dateFrom.value=${dateFrom.value}`);
+  console.log(`timeFrom.value=${timeFrom.value}`);
   var dataFrom1 = calcEpoch(dateFrom.value, timeFrom.value);
-  console.log(`dataFrom1 ${dataFrom1}`)
-
-  var dataTo1 =calcEpoch(dateTo.value, timeTo.value)
-  console.log(`dataTo1 ${dataTo1}`)
+  console.log(`dataFrom1 ${dataFrom1}`);
+  console.log(`dateTo.value=${dateTo.value}`);
+  console.log(`timeTo.valuee=${timeTo.value}`);
+  var dataTo1 = calcEpoch(dateTo.value, timeTo.value);
+  console.log(`dataTo1 ${dataTo1}`);
+  getData();
 });
 
-function calcEpoch(date, time){
-var dateString =date+"T"+time
-console.log(`dateString=${dateString}`)
-convertFromStringToDate(dateString)
-console.log(`convertFromStringToDate(dateString)= ${convertFromStringToDate(dateString)}`)
+function calcEpoch(date, time) {
+  var dateString = date + "T" + time;
+  console.log(`dateString=${dateString}`);
+  return convertFromStringToDate(dateString);
 }
 
 function convertFromStringToDate(responseDate) {
-  let dateComponents = responseDate.split('T');
+  let dateComponents = responseDate.split("T");
   let datePieces = dateComponents[0].split("-");
   let timePieces = dateComponents[1].split(":");
-  return(new Date(datePieces[2], (datePieces[1] - 1), datePieces[0],
-                       timePieces[0], timePieces[1], timePieces[2]))
+  // console.log(`dzień=${datePieces[2]}`);
+  // console.log(`miesiąc= ${datePieces[1] - 1}`);
+  // console.log(`rok=${datePieces[0]}`);
+  // console.log(`HH=${timePieces[0]}`);
+  // console.log(`MM=${timePieces[1]}`);
+  // console.log(`SS=${timePieces[2]}`);
+
+  return new Date(
+    datePieces[0],
+    datePieces[1] - 1,
+    datePieces[2],
+    timePieces[0],
+    timePieces[1],
+    timePieces[2]
+  );
 }
