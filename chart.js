@@ -24,7 +24,7 @@ function getData() {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ obiekt: obiekt, epochFrom: dataFrom1, epochTo: dataTo1}),
+      body: JSON.stringify({ obiekt: obiekt, epochFrom: "dataFrom1", epochTo: "dataTo1"}),
     });
     const content = await rawResponse.json();
 
