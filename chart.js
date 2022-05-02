@@ -3,6 +3,9 @@ var dateFrom = document.getElementById("datepicker1");
 var dateTo = document.getElementById("datepicker2");
 var timeFrom = document.getElementById("timepicker1");
 var timeTo = document.getElementById("timepicker2");
+var btn1=document.getElementById("przycisk1");
+var dataFrom1,dataTo1;
+
 fetch("https://tempapi.ct8.pl/getrooms")
   .then((res) => res.json())
   .then((res) => {
@@ -16,11 +19,12 @@ function getData() {
   (async () => {
     const rawResponse = await fetch("https://tempapi.ct8.pl/gettemp", {
       method: "POST",
+      mode: 'no-cors',
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ obiekt: obiekt, epochFrom: " ", epochTo: " " }),
+      body: JSON.stringify({ obiekt: obiekt, epochFrom: dataFrom1, epochTo: dataTo1}),
     });
     const content = await rawResponse.json();
 
@@ -34,20 +38,20 @@ function addToSelect(item) {
   myOption.value = item.my_nr_dec;
   roomSelect.add(myOption);
 }
-
-roomSelect.addEventListener("change", function () {
-  
+roomSelect.addEventListener("change", function () {  
   console.log(`dateFrom.value=${dateFrom.value}`);
   console.log(`timeFrom.value=${timeFrom.value}`);
-  var dataFrom1 = calcEpoch(dateFrom.value, timeFrom.value);
+  dataFrom1 = calcEpoch(dateFrom.value, timeFrom.value);
   console.log(`dataFrom1 ${dataFrom1}`);
   console.log(`dateTo.value=${dateTo.value}`);
   console.log(`timeTo.valuee=${timeTo.value}`);
-  var dataTo1 = calcEpoch(dateTo.value, timeTo.value);
+  dataTo1 = calcEpoch(dateTo.value, timeTo.value);
   console.log(`dataTo1 ${dataTo1}`);
   getData();
 });
-
+btn1.addEventListener("click", function () {
+  getData();
+});
 function calcEpoch(date, time) {
   var dateString = date + "T" + time;
   console.log(`dateString=${dateString}`);
