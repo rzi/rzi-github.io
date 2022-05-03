@@ -51,6 +51,7 @@ function createTable(content) {
 }
 function fnTimeConv (label2){
   // Convert timestamp to milliseconds label2 = timestamp
+  //var tz = new Date().getTimezoneOffset()/-60;
   var date = new Date(label2*1000);
   var year = date.getFullYear();
   var month = date.getMonth();
@@ -62,7 +63,7 @@ function fnTimeConv (label2){
     if (day<10){
         day="0"+day;
     }
-  var hours = date.getHours();
+  var hours = date.getHours()//+ tz;
   var minutes = "0" + date.getMinutes();
   var convdataTime = year+'-'+month+'-'+day+' '+hours + ':' + minutes.substr(-2);
   return convdataTime;
