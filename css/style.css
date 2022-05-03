@@ -223,12 +223,36 @@ nav{
 }
 
 .tableClass{
-margin: 10px;
+margin: 10px auto;
 padding: 5px;
 text-align: center;
 width:fit-content;
 }
 .table {
-  display: flex;
-  justify-content: center;
+  padding-top: 10px;
+  margin:0 auto;
+}
+/* spiner */
+.loader {
+  padding-top: 20px;
+  border: 16px solid #111c63;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin:0 auto;
+}
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.main {
+  margin:0 auto;
 }

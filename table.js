@@ -5,6 +5,12 @@ var table = document.getElementById("table");
   });
   const content = await rawResponse.json();
   console.log(content);
+  if (content) {
+    var loader=  document.getElementById("loader");
+    // loader.style.display = 'none';
+    loader.classList.remove("loader");
+
+  }
   createTable(content);
 })();
 
