@@ -107,13 +107,32 @@ function convertFromStringToDate(responseDate) {
   );
 }
 function chartUpdate(content){
-  console.log(`content=${content}`)
-  for (i=0; i< content.lenght;i++){
-    chart.data.datasets[0].data[i] =data1;
-    chart.data.labels[i]=label3;
-    i=i+1;
+  console.log(`content1=${content[0].temp}`)
+  console.log(`content.lenght=${Object.keys(content).length}`)
+  for (i=0; i< Object.keys(content).length;i++){
+    chart.data.datasets[0].data[i] =content[i].temp;
+    const my_date = fnTimeConv(content[i].my_epoch);
+    chart.data.labels[i]=my_date;
+    // i=i+1;
+    console.log(`chart.data.datasets[0].data[i]=${chart.data.datasets[0].data[i]}`)
   }
   chart.update();
 }
-
-
+function fnTimeConv (label2){
+  // Convert timestamp to milliseconds label2 = timestamp
+  var date = new Date(label2*1000);
+  var year = date.getFullYear();
+  var month = date.getMonth();
+    month=month+1;
+    if (month<10){
+      month="0"+month;
+    }
+  var day = date.getDate();
+    if (day<10){
+        day="0"+day;
+    }
+  var hours = date.getHours();
+  var minutes = "0" + date.getMinutes();
+  var convdataTime = year+'-'+month+'-'+day+' '+hours + ':' + minutes.substr(-2);
+  return convdataTime;
+}
