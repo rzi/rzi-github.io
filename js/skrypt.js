@@ -1,21 +1,21 @@
 $(document).ready(function () {
-  var ctx = document.getElementById('myChart').getContext('2d');
-  var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
-    data: {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-      datasets: [{
-        label: 'Pomiar temperatury',
-        borderColor: 'rgb(55, 39, 250)',
-        data: [0, 10, 5, 2, 20, 30, 45],
-        fill: false
-      }]
-    },
+  // var ctx = document.getElementById('myChart').getContext('2d');
+  // var chart = new Chart(ctx, {
+  //   // The type of chart we want to create
+  //   type: 'line',
+  //   data: {
+  //     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  //     datasets: [{
+  //       label: 'Pomiar temperatury',
+  //       borderColor: 'rgb(55, 39, 250)',
+  //       data: [0, 10, 5, 2, 20, 30, 45],
+  //       fill: false
+  //     }]
+  //   },
 
-    // Configuration options go here
-    options: {}
-  });
+  //   // Configuration options go here
+  //   options: {}
+  // });
   //js koniec
 
   var obiekt;
@@ -66,14 +66,14 @@ $(document).ready(function () {
     dzien=document.querySelector('input[type="date"]').value;
   });
 
-  $("#przycisk2").click(function () {
-  var j;
-    for (j=0;j<1440;j++){
-         chart.data.labels.splice(j,1);
-         chart.data.datasets[0].data.splice (j,1);
-    }
-  chart.update();
-  });
+  // $("#przycisk2").click(function () {
+  // var j;
+  //   for (j=0;j<1440;j++){
+  //        chart.data.labels.splice(j,1);
+  //        chart.data.datasets[0].data.splice (j,1);
+  //   }
+  // chart.update();
+  // });
 
   $("#przycisk1").click(function () {
     //alert("przycisk1");
