@@ -19,7 +19,6 @@ var chart = new Chart(ctx, {
       fill: false
     }]
   },
-
   // Configuration options go here
   options: {}
 });
@@ -90,13 +89,6 @@ function convertFromStringToDate(responseDate) {
   let dateComponents = responseDate.split("T");
   let datePieces = dateComponents[0].split("-");
   let timePieces = (dateComponents[1].split(":"));
-  // console.log(`dzień=${datePieces[2]}`);
-  // console.log(`miesiąc= ${datePieces[1] - 1}`);
-  // console.log(`rok=${datePieces[0]}`);
-  // console.log(`HH=${timePieces[0]}`);
-  // console.log(`MM=${timePieces[1]}`);
-  // console.log(`SS=${timePieces[2]}`);
-
   return new Date(
     datePieces[0],
     datePieces[1] - 1,
@@ -113,7 +105,6 @@ function chartUpdate(content){
     chart.data.datasets[0].data[i] =content[i].temp;
     const my_date = fnTimeConv(content[i].my_epoch);
     chart.data.labels[i]=my_date;
-    // i=i+1;
     console.log(`chart.data.datasets[0].data[i]=${chart.data.datasets[0].data[i]}`)
   }
   chart.update();
