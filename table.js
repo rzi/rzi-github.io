@@ -4,7 +4,7 @@ var table = document.getElementById("table");
     method: "get",
   });
   const content = await rawResponse.json();
-  console.log(content);
+  console.log("getlast" + Object.entries(content[0]));
   if (content) {
     var loader=  document.getElementById("loader");
     // loader.style.display = 'none';
@@ -19,7 +19,7 @@ function createTable(content) {
   tbl.setAttribute("class", "tableClass");
   tbl.setAttribute("id", "tableId");
 
-  var theadData = ["id", "data i godz", "nr_hex", "temp"];
+  var theadData = ["id", "data i godz", "nr_hex", "temp", "nr czujnika", "pomieszczenie"];
   var thead = document.createElement("thead");
   var theadTr = document.createElement("tr");
   for (t = 0; t < theadData.length; t++) {
@@ -36,14 +36,20 @@ function createTable(content) {
     var td2 = document.createElement("td");
     var td3 = document.createElement("td");
     var td4 = document.createElement("td");
+    var td5 = document.createElement("td");
+    var td6 = document.createElement("td");
     td1.appendChild(document.createTextNode(content[i].id));
     td2.appendChild(document.createTextNode(fnTimeConv (content[i].my_epoch)));
     td3.appendChild(document.createTextNode(content[i].nr_hex));
     td4.appendChild(document.createTextNode(content[i].temp));
+    td5.appendChild(document.createTextNode(content[i].nr_czujnika));
+    td6.appendChild(document.createTextNode(content[i].my_pomieszczenie));
     tr.appendChild(td1);
     tr.appendChild(td2);
     tr.appendChild(td3);
     tr.appendChild(td4);
+    tr.appendChild(td5);
+    tr.appendChild(td6);
 
     tbl.appendChild(tr);
   }
