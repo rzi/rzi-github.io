@@ -55,13 +55,35 @@ function addToSelect(item) {
   roomSelect.add(myOption);
 }
 roomSelect.addEventListener("change", function () {  
+  console.log("click select ")
   getDatePicker();
   getData();
 });
 btn1.addEventListener("click", function () {
+  console.log("click btn ")
   getDatePicker();
   getData();
 });
+timeFrom.addEventListener("change", function(){
+  console.log("click time from")
+  getDatePicker();
+  getData();
+})
+timeTo.addEventListener("change", function(){
+  console.log("click time to")
+  getDatePicker();
+  getData();
+})
+dateTo.addEventListener("change", function(){
+  console.log("click date to")
+  getDatePicker();
+  getData();
+})
+dateFrom.addEventListener("change", function(){
+  console.log("click date From")
+  getDatePicker();
+  getData();
+})
 btn2.addEventListener("click" ,function(){
   var j;
   for (j=0;j<1440;j++){
@@ -81,7 +103,7 @@ function getDatePicker (){
   dataFrom1 = calcEpoch(dateFrom.value, timeFrom.value);
   console.log(`dataFrom1 ${dataFrom1}`);
   console.log(`dateTo.value=${dateTo.value}`);
-  console.log(`timeTo.valuee=${timeTo.value}`);
+  console.log(`timeTo.value=${timeTo.value}`);
   dataTo1 = calcEpoch(dateTo.value, timeTo.value);
   console.log(`dataTo1 ${dataTo1}`);
 }
