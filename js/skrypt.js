@@ -1,23 +1,4 @@
 $(document).ready(function () {
-  // var ctx = document.getElementById('myChart').getContext('2d');
-  // var chart = new Chart(ctx, {
-  //   // The type of chart we want to create
-  //   type: 'line',
-  //   data: {
-  //     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-  //     datasets: [{
-  //       label: 'Pomiar temperatury',
-  //       borderColor: 'rgb(55, 39, 250)',
-  //       data: [0, 10, 5, 2, 20, 30, 45],
-  //       fill: false
-  //     }]
-  //   },
-
-  //   // Configuration options go here
-  //   options: {}
-  // });
-  //js koniec
-
   var obiekt;
   var godzina;
   var godzina2;
@@ -66,50 +47,6 @@ $(document).ready(function () {
     dzien=document.querySelector('input[type="date"]').value;
   });
 
-  // $("#przycisk2").click(function () {
-  // var j;
-  //   for (j=0;j<1440;j++){
-  //        chart.data.labels.splice(j,1);
-  //        chart.data.datasets[0].data.splice (j,1);
-  //   }
-  // chart.update();
-  // });
-
-  $("#przycisk1").click(function () {
-    //alert("przycisk1");
-    var i=0;
-    var j;
-    var k;
-    $.ajax({
-      async: true,   // this will solve the problem
-      type: "GET",
-      dataType : 'json',
-      url: "zapytanie.php",
-  	  data: {
-        obiekt: obiekt,
-        wczoraj:wczoraj,
-        dzien: dzien,
-        godzina: godzina,
-        godzina2: godzina2
-        },
-      success: function (response1) {
-
-        $.each(response1, function (key, data1) {
-          data2=chart.data.datasets[0].data[i] =data1;
-          label3 = fnTimeConv(key);
-//          console.log(label3);
-//          console.log(data2);
-          chart.data.labels[i]=label3;
-          i=i+1;
-        })
-        chart.update();
-        },
-      fail: function (blad) {
-        alert("Wystąpił błąd");
-        console.log(blad);
-      }
-    }); // koniec ajax
-  }); //koniec  przycisk 1
 
 // funkcje
   function getTime() {
