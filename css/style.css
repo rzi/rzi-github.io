@@ -256,3 +256,11 @@ width:fit-content;
 .main {
   margin:0 auto;
 }
+.desctription{
+  margin-left:  300px;
+  padding-bottom: 30px;
+  text-align:justify;
+}
+a{
+  margin-left: 20px;
+}
