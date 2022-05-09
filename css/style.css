@@ -264,3 +264,11 @@ width:fit-content;
 a{
   margin-left: 20px;
 }
+.qr{
+  padding-left: 10px;;
+}
+.qrMain{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
