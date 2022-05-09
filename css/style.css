@@ -257,13 +257,14 @@ width:fit-content;
   margin:0 auto;
 }
 .desctription{
-  margin-left:  300px;
+  /* margin-left:  300px; */
   padding-bottom: 30px;
   text-align:justify;
 }
-a{
+/* a{
   margin-left: 20px;
-}
+  margin-bottom: 100px;
+} */
 .qr{
   padding-left: 10px;;
 }
