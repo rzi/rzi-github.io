@@ -272,4 +272,11 @@ width:fit-content;
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  justify-content: center;
+}
+.qrMain2{
+  display: grid;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: center;
 }
