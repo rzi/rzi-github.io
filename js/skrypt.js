@@ -46,8 +46,6 @@ $(document).ready(function () {
   $('#datepicker2').change (function(){
     dzien=document.querySelector('input[type="date"]').value;
   });
-
-
 // funkcje
   function getTime() {
     var godz=teraz.getHours();
