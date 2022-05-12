@@ -170,14 +170,14 @@ body {
 
 .navigation {
   height: 100vh;
-  width: 250px;
+  width: 290px;
   background-color: #ffffff;
   position: absolute;
   top: 0;
   left: 0;
   visibility: hidden;
-  -webkit-transform: translateX(-250px);
-  transform: translateX(-250px);
+  -webkit-transform: translateX(-290px);
+  transform: translateX(-290px);
 
 }
 
@@ -270,4 +270,7 @@ width:fit-content;
   align-items: center;
   margin-bottom: 10px;
   justify-content: center;
+}
+.tech{
+  color :gray;
 }
