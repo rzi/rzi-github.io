@@ -1,68 +1,143 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="pl-PL">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="/css/style.css" type="text/css" />
     <title>Pomiar temperatury Raspberry PI</title>
-</head>
-<body>
-    <main class="main">
-        <div class="container">
-            <h3>Pomiar temperatury i zapis w bazie danych</h3>
-            <a href="./index.html"> Powrót</a>
-            <div class="contener1">
-                <p>Celem projektu są pomiary temperatur, ich
-                    zapis do zewnętrznej bazy danych oraz sterowanie zaworami ogrzewania podłogowego</p>
-                <img alt="Pi" src="/img/schemat_rpi2.png" class="img-fluid"> <br>
-                <h4>1.Hardware:</h4>
-                <ul>
-                    <li>
-                        Czujnik temperatury DS18B20
-                    </li>
-                    <Li>
-                        Moduł interfejsu One wire na USB firmy Meraprojekt (FT232RL + DS2480)
-                    </Li>
-                    <li>
-                        Raspberry Pi jako serwer
-                    </li>
-                    <li>
-                        Moduł 8 przekaźników
-                    </li>
-                </ul>
-                <h4>2.Software:</h4>
-                <ul>
-                    <li>
-                        Serwer HTTP (Apache, PHP, MySQL)
-                    </li>
-                    <li>
-                        Python - oprogramowanie modułu pomiarowego
-                    </li>
-                </UL>
-                <h3>Pomiar temperatury- Monitor danych (archiwum)</h3>
-                <ul>
-                    <li>
-                        <a href="chart.html">Pomiar temperatury - wykresy >>></a>
-                    </li>
-                    <li>
-                        <a href="/table.html">Pomiar temperatury - dane >>></a>
-                    </li>
-                </ul>
-            </div>
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+        <button class="hamburger" aria-expanded="false">
+          <span class="sr-only">Otwórz/zamknij menu</span>
+          <span class="hamburger__box">
+            <span class="hamburger__inner"></span>
+          </span>
+        </button>
+        <div class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="./heating.html"
+                ><strong>Pomiary temperatur </strong> <br />
+                <div class="tech">(JS, ExpressJS, API)</div>
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="./timekeeper1.html"
+                ><strong>Timekeeper 1.0 </strong> <br />
+                <div class="tech">(C#)</div></a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="./timekeeper2.html"
+                ><strong> Timekeeper 2.0 </strong> <br />
+                <div class="tech">(ElectronJS)</div></a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="./elunch.html"
+                ><strong> Elunch </strong> <br />
+                <div class="tech">(HTML,CSS, JS, ExpressJS)</div></a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="./gps-bus-view.html"
+                ><strong> Gps-bus-view </strong> <br />
+                <div class="tech">(React Native)</div></a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="./gps-tracker-android.html"
+                ><strong>GPSTrackerAndroid </strong> <br />
+                <div class="tech">(Android, Java)</div></a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="./location-background.html"
+                ><strong> LocationBackground</strong> <br />
+                <div class="tech">(React, Expo)</div></a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="./single-point-lesson.html"
+                ><strong> SinglePointLesson </strong> <br />
+                <div class="tech">(HTML, Php, Mysql)</div></a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="./raspberry-pi.html"
+                ><strong> Raspberry Pi </strong> <br />
+                <div class="tech">(Linux)</div></a
+              >
+            </li>
+          </ul>
         </div>
-    </main>    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-</body>
+      </nav>
+      <h1>Pomiar temperatury i zapis w bazie danych</h1>
+    </div>
+
+    <hr />
+    <main class="main">
+      <div class="container">
+        <!-- <h3>Pomiar temperatury i zapis w bazie danych</h3>
+        <a href="./index.html"> Powrót</a> -->
+        <div class="contener1">
+          <p>
+            Celem projektu są pomiary temperatur, ich zapis do zewnętrznej bazy
+            danych oraz sterowanie zaworami ogrzewania podłogowego
+          </p>
+          <img alt="Pi" src="/img/schemat_rpi2.png" class="img-fluid" /> <br />
+          <h4>1.Hardware:</h4>
+          <ul>
+            <li>Czujnik temperatury DS18B20</li>
+            <li>
+              Moduł interfejsu One wire na USB firmy Meraprojekt (FT232RL +
+              DS2480)
+            </li>
+            <li>Raspberry Pi jako serwer</li>
+            <li>Moduł 8 przekaźników</li>
+          </ul>
+          <h4>2.Software:</h4>
+          <ul>
+            <li>Serwer HTTP (Apache, PHP, MySQL)</li>
+            <li>Python - oprogramowanie modułu pomiarowego</li>
+          </ul>
+          <h3>Pomiar temperatury- Monitor danych (archiwum)</h3>
+          <ul>
+            <li>
+              <a href="chart.html">Pomiar temperatury - wykresy >>></a>
+            </li>
+            <li>
+              <a href="/table.html">Pomiar temperatury - dane >>></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
 </html>

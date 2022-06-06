@@ -30,7 +30,9 @@ h4 {
   font-size: 20px;
   /*    text-align-last: center;*/
 }
-
+.header{
+  display: inline;
+}
 .dane {
   text-align: center;
   margin-bottom: 20px;
