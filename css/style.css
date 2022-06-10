@@ -252,6 +252,8 @@ width:fit-content;
 }
 .main {
   margin:0 auto;
+  /* margin-left: 300px;
+  margin-right: 300px; */
 }
 .desctription{
   /* margin-left:  300px; */
