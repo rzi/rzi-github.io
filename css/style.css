@@ -32,6 +32,7 @@ h4 {
 }
 .header{
   display: inline;
+
 }
 .dane {
   text-align: center;
@@ -254,6 +255,19 @@ width:fit-content;
   margin:0 auto;
   /* margin-left: 300px;
   margin-right: 300px; */
+
+}
+@media screen and (max-width: 1600px) {
+  .main {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .main {
+    margin-left: 200px;
+    margin-right: 300px;
+  }
 }
 .desctription{
   /* margin-left:  300px; */
@@ -280,4 +294,44 @@ width:fit-content;
 }
 .section{
   margin-bottom: 10px;
+}
+.measure{
+  background-image: url(../img/screens/measurement\ —\ kopia2.png);
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: contain;
+  min-height: 350px;
+
+}
+.setup{
+  background-image: url(../img/screens/connection.PNG);
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: contain;
+  min-height: 350px;
+
+}
+.progress{
+  background-image: url(../img/screens/progresss.PNG);
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: contain;
+  min-height: 100px;
+
+}
+.table{
+  background-image: url(../img/screens/table.PNG);
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: contain;
+  min-height: 350px;
+
+}
+.chart{
+  background-image: url(../img/screens/chart.PNG);
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: contain;
+  min-height: 350px;
+
 }
