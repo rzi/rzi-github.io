@@ -335,6 +335,7 @@ width:fit-content;
 }
 .header-sticky{
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   background-color:rgb(245, 237, 237);
 }
