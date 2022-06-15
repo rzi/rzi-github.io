@@ -257,16 +257,16 @@ width:fit-content;
   margin-right: 300px; */
 
 }
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 900px) {
   .main {
     margin-left: 0px;
     margin-right: 0px;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
   .main {
     margin-left: 200px;
-    margin-right: 300px;
+    margin-right: 200px;
   }
 }
 .desctription{
@@ -295,7 +295,7 @@ width:fit-content;
 .section{
   margin-bottom: 10px;
 }
-.measure{
+/* .measure{
   background-image: url(../img/screens/measurement\ —\ kopia2.png);
   background-position: center;
   background-repeat:no-repeat;
@@ -326,12 +326,10 @@ width:fit-content;
   background-size: contain;
   min-height: 350px;
 
-}
-.chart{
-  background-image: url(../img/screens/chart.PNG);
-  background-position: center;
-  background-repeat:no-repeat;
-  background-size: contain;
-  min-height: 350px;
+} */
+.picture{
+  width: 100%;
+  max-width: 600px;
+  height: auto;
 
 }
