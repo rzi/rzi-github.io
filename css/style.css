@@ -333,3 +333,8 @@ width:fit-content;
   height: auto;
 
 }
+.header-sticky{
+  position: sticky;
+  top: 0;
+  background-color:rgb(245, 237, 237);
+}
