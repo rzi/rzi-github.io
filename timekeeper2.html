@@ -1,88 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timekeeper 2.0</title>
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
     <link href="./css/normalize.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-    <nav>
-        <button class="hamburger" aria-expanded="false">
-          <span class="sr-only">Otwórz/zamknij menu</span>
-          <span class="hamburger__box">
-            <span class="hamburger__inner"></span>
-          </span>
-        </button>
-        <div class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="./index.html"
-                ><strong>Main page </strong> <br />
-              </a>
-            </li>
-            <li class="navigation__item">
-              <a href="./heating.html"
-                ><strong>Pomiary temperatur </strong> <br />
-                <div class="tech">(JS, ExpressJS, API)</div>
-              </a>
-            </li>
-            <li class="navigation__item">
-              <a href="./timekeeper1.html"
-                ><strong>Timekeeper 1.0 </strong> <br />
-                <div class="tech">(C#)</div></a
-              >
-            </li>
-            <li class="navigation__item">
-              <a href="./timekeeper2.html"
-                ><strong> Timekeeper 2.0 </strong> <br />
-                <div class="tech">(ElectronJS)</div></a
-              >
-            </li>
-            <li class="navigation__item">
-              <a href="./elunch.html"
-                ><strong> Elunch </strong> <br />
-                <div class="tech">(HTML,CSS, JS, ExpressJS)</div></a
-              >
-            </li>
-            <li class="navigation__item">
-              <a href="./gps-bus-view.html"
-                ><strong> Gps-bus-view </strong> <br />
-                <div class="tech">(React Native)</div></a
-              >
-            </li>
-            <li class="navigation__item">
-              <a href="./gps-tracker-android.html"
-                ><strong>GPSTrackerAndroid </strong> <br />
-                <div class="tech">(Android, Java)</div></a
-              >
-            </li>
-            <li class="navigation__item">
-              <a href="./location-background.html"
-                ><strong> LocationBackground</strong> <br />
-                <div class="tech">(React, Expo)</div></a
-              >
-            </li>
-            <li class="navigation__item">
-              <a href="./single-point-lesson.html"
-                ><strong> SinglePointLesson </strong> <br />
-                <div class="tech">(HTML, Php, Mysql)</div></a
-              >
-            </li>
-            <li class="navigation__item">
-              <a href="./raspberry-pi.html"
-                ><strong> Raspberry Pi </strong> <br />
-                <div class="tech">(Linux)</div></a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <h1>Timekeeper 2.0</h1>
-      <hr>
-      <article>desctription</article>
+  </head>
+  <body>
+    <div class="main">
+      <div class="header-sticky">
+        <nav>
+          <button class="hamburger" aria-expanded="false">
+            <span class="sr-only">Otwórz/zamknij menu</span>
+            <span class="hamburger__box">
+              <span class="hamburger__inner"></span>
+            </span>
+          </button>
+          <div class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="./index.html"><strong>Main page </strong> <br /> </a>
+              </li>
+              <li class="navigation__item">
+                <a href="./heating.html"
+                  ><strong>Pomiary temperatur </strong> <br />
+                  <div class="tech">(JS, ExpressJS, API)</div>
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a href="./timekeeper1.html"
+                  ><strong>Timekeeper 1.0 </strong> <br />
+                  <div class="tech">(C#)</div></a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="./timekeeper2.html"
+                  ><strong> Timekeeper 2.0 </strong> <br />
+                  <div class="tech">(ElectronJS)</div></a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="./elunch.html"
+                  ><strong> Elunch </strong> <br />
+                  <div class="tech">(HTML,CSS, JS, ExpressJS)</div></a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="./gps-bus-view.html"
+                  ><strong> Gps-bus-view </strong> <br />
+                  <div class="tech">(React Native)</div></a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="./gps-tracker-android.html"
+                  ><strong>GPSTrackerAndroid </strong> <br />
+                  <div class="tech">(Android, Java)</div></a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="./location-background.html"
+                  ><strong> LocationBackground</strong> <br />
+                  <div class="tech">(React, Expo)</div></a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="./single-point-lesson.html"
+                  ><strong> SinglePointLesson </strong> <br />
+                  <div class="tech">(HTML, Php, Mysql)</div></a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="./raspberry-pi.html"
+                  ><strong> Raspberry Pi </strong> <br />
+                  <div class="tech">(Linux)</div></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <h1>Timekeeper 2.0</h1>
+        <hr />
+      </div>
+      <h5>Introduction</h5>
+      <p class="container">
+        This is second generation of Timekeeper application. Main change in on
+        technology used to create this application and concept to bring more
+        efficiency and flexibility on time management. You can download
+        application for windows hier. If you need version for macOS or linux let
+        me know <a href="mailto:rzi@vp.pl">rzi@vp.pl</a>
+      </p>
+      <button
+        class="btnDownload"
+        onclick="location.href='https://drive.google.com/file/d/1zJ2OcpqDwDvcZ6WoeGhRAUOWAzOmUbbo/view?usp=sharing'"
+      >
+        Download
+      </button>
+      <br /><br />
+      <h5>How install it</h5>
+      <p class="container">
+        After downoad you can click on the Timekeeeper2.0.0.exe file and
+        automatic installer will follow you via installation process. When
+        installation process will finish you will see Timekeeper icon on your
+        desktop and application will be open, ready to configuration and use.
+        Easy? easy!
+      </p>
+      <img src="/img/timerIcon.png" alt="timekeeper icon" class="picture2" />
+      <h5>How to use it - general</h5>
+      <p class="container">
+        When application is open, you can find on your screen two windows. First
+        window is for meeting animator, to change settings and operate during
+        presentation of presenters. On first line you can see current date and
+        time. Next line show name of conference and sheduled meeting time. how
+        to setup ptesenters and time you can see on chapter settings. On third
+        line we can write message what could be wisible for presenter and
+        audiences on second window. Last part is for list of presenters order by
+        sequence of presenter.
+      </p>
+      <img
+        src="/img/timekeeper main.gif"
+        alt="timekeeper main"
+        class="picture"
+      />
+      <p>
+        Second window is to vizualize progress of presentation for presenters
+        and also for audiences. Presenter and also animator can click button
+        next when first presenter finish his/her presentation
+      </p>
+      <img
+        src="/img/timekeeper progress.png"
+        alt="timekeeper main"
+        class="picture"
+      />
+      <h5>First of all - settings</h5>
+      <p class="container">
+        If you would like to change settings, you should navigate to hamburger
+        menu on right top corner and click settings in left side menu list. You
+        will see settings page divided on two sections. On top section you can
+        add name of meeting and new presenters with alocated time for their
+        presentation. Second bottome section is for editing name and time
+        already added presenters and deleted presenters if we dont need it.
+      </p>
+      <img src="/img/settings.png" alt="timekeeper main" class="picture" />
+      <p>
+        Below you can see screen setting page when you would like to edit
+        settings. First, click on the line that you woiuld like to edit an next
+        click edit button.
+      </p>
+      <img src="/img/settings-edit.png" alt="settinge-edit" class="picture" />
+      <p>
+        Right now you can modifie time and presenter name. If you did it, you
+        can save change by click buton save.
+      </p>
+      <br />
+      <p>
+        If you would like to deletew presenter from presenters list, mark which
+        line you would like to delete and click delete buton. Marked lina is
+        indicated on yelloe color
+      </p>
+      <img
+        src="/img/settings-delete.png"
+        alt="settings-delete"
+        class="picture"
+      />
+      <h5>How to use it - details</h5>
+      <p class="container">
+        We have application ready to use, Let say thet meetinh name is test and we have three presenters (presenter1 , presenter2, presenter3) with alocated time 1 minute for presenter1, 2 minutes for presenter2 and 3 minutes for presenter3, so we are ready to start our meeting.
+      </p>
+      <img src="/img/timekeeper main.gif" alt="timekeeper main" class="picture" />
+      <p>To start presenter we click buton play on main page. Color of buton will change from balck to red it means presenter is duing his/her presentation.</p>
+      <img src="/img/main0.png" alt="start" class="picture">
+      <p>On the progress bar which could by display on projector we can see progress presentation time of currewnt presenter</p>
+      <img src="/img/progress1.png" alt="progress 1" class="picture">
+      <p>When presentation of current presenter is finish, animator click buton next on window progress bar and we give floor to next presenter. The same functionality is if we click next play button on main page. After finish first presentation on main page we see result of first presenter, it means his/her result in procent of used time and used time in minuses. See details on screen below </p>
+      <img src="/img/main2.png" alt="main2" class="picture">
+      <p>We repate the same for each presenter until all play butons are green. Gren buttons means that presentations are finished</p>
+      <img src="/img/main5.png" alt="main5" class="picture">
+      <p>to sumarize meeting we have two solutions:</p>
+      <p>go to result table via hamburger menu </p>
+      <img src="/img/db.png" alt="db" class="picture">
+      <p>or to go to waterfall chart also clicking on hamburger meu item waterfall</p>
+      <img src="/img/wf.png" alt="wf" class="picture">
+      <h5>Help and tips</h5>
+
+      <p>If you steel need nor help you can use help inside application, as olways navigate on hamburger menu to ihem help</p>
+      <img src="/img/help.png" alt="help" class="picture">
+      <p>Tip.1 If you need to toggle wundow progress bar yo should navigate via hamburger menu to item Show progress bar and click it</p>
+      <img src="/img/show.png" alt="show" class="picture">
+      <p>Tip.2 If you would like to send message to audiences or presenter you can do it on main page writing your mesaage on input message and send by clik on buton send</p>
+      <p>Tip.3 Reset each windows to defaut is by clicking ctrl+r</p>
+
       <script src="main.js"></script>
-</body>
+    </div>
+  </body>
 </html>
